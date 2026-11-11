@@ -1,0 +1,50 @@
+/* ========== VARIABLES ========== */
+:root {
+  --color-item: lightsalmon;
+  --color-sub-item: rgb(253, 213, 197);
+  --gap-items: 5px;
+  --gap-sub-items: 1rem;
+}
+
+/* ========== BASE ========== */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* ========== LAYOUT ========== */
+/* Fase 2: grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--gap-items);
+}
+.item-1 {
+  grid-column: 1 / -1;
+}
+.item-5 {
+  grid-column: 1 / -1;
+}
+
+/* Fase 1: subgrid dins de l'item 3 */
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--gap-sub-items);
+}
+
+/* ========== COMPONENTS ========== */
+.grid-item {
+  background-color: var(--color-item);
+  padding: 3rem;
+}
+.sub-item {
+  background-color: var(--color-sub-item);
+  padding: 1rem;
+}
